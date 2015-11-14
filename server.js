@@ -7,7 +7,9 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , request = require('request');
+
 
 var app = express();
 
@@ -29,6 +31,18 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.get('/intruder', function(req, res){
+    //var requestUrl = ;
+    request(requestUrl, function(error, response, body){
+    if (!error && response.statusCode == 200){
+        
+    }
+    else {
+        res.send(error);
+    }
+  });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
