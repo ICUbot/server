@@ -36,9 +36,8 @@ app.get('/users', user.list);
 
 
 app.post('/image', function(req, res) {
-    console.log(req.files.image.originalFilename);
-    console.log(req.files.image.path);
-    fs.readFile(req.files.image.path, function (err, data){
+    /*
+    fs.readFile(req.files.file.path, function (err, data){
         var dirname = "/public/imgs";
         var newPath = dirname + "/uploads/" + "image";
         fs.writeFile(newPath, data, function (err) {
@@ -49,6 +48,7 @@ app.post('/image', function(req, res) {
             }
         });
     });
+*/
 });
  
  
