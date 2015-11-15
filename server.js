@@ -36,7 +36,7 @@ app.get('/users', user.list);
 
 
 app.post('/image', function(req, res) {
-    /*
+
     fs.readFile(req.files.file.path, function (err, data){
         var dirname = "/public/imgs";
         var newPath = dirname + "/uploads/" + "image";
@@ -48,7 +48,7 @@ app.post('/image', function(req, res) {
             }
         });
     });
-*/
+
 });
  
  
