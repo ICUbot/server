@@ -63,10 +63,10 @@ app.get('/image/:file', function (req, res){
 app.get('/intruder', function(req, res){
   // auth keys
   var T = new Twit({
-      consumer_key:         '7NcliyXkErrRqXaPkJU84jEQn'
-    , consumer_secret:      '1Q2KcBfhbw4xUuTqvAre2GBXT0OYhd3lIZa0wmuDR7Nie8fKgs'
-    , access_token:         '622419647-a60CFvSpdbjyGV0JjcqZL6EX4s6vMi8oNI9SLoKm'
-    , access_token_secret:  'kemKmdVFRK1Bm34cO6c55pMjv5BELj4sa2Ooznrjr8ieE'
+      consumer_key:         'i16nHoJ8SFsgbVJEPxle24jgS'
+    , consumer_secret:      'Ke18Hs8BaC4N1zMBhLlcRnxGYXWpGQ6SsbJ0A7WFfHs12ehN5y'
+    , access_token:         '4188246705-BIpbm5o0tCe5uejZeSkcwoeBew86Teoy2Op4bpH'
+    , access_token_secret:  'NdVwoXm5o50wvCbI5Tkvf6ItqR6VAtwX7s5wIdQiuuCJL'
   });
 
   // image encoding
@@ -93,10 +93,10 @@ app.get('/intruder', function(req, res){
 app.get('/captured', function(req, res){
   // auth keys
   var T = new Twit({
-      consumer_key:         '7NcliyXkErrRqXaPkJU84jEQn'
-    , consumer_secret:      '1Q2KcBfhbw4xUuTqvAre2GBXT0OYhd3lIZa0wmuDR7Nie8fKgs'
-    , access_token:         '622419647-a60CFvSpdbjyGV0JjcqZL6EX4s6vMi8oNI9SLoKm'
-    , access_token_secret:  'kemKmdVFRK1Bm34cO6c55pMjv5BELj4sa2Ooznrjr8ieE'
+      consumer_key:         'i16nHoJ8SFsgbVJEPxle24jgS'
+    , consumer_secret:      'Ke18Hs8BaC4N1zMBhLlcRnxGYXWpGQ6SsbJ0A7WFfHs12ehN5y'
+    , access_token:         '4188246705-BIpbm5o0tCe5uejZeSkcwoeBew86Teoy2Op4bpH'
+    , access_token_secret:  'NdVwoXm5o50wvCbI5Tkvf6ItqR6VAtwX7s5wIdQiuuCJL'
   });
 
   // image encoding
