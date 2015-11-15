@@ -94,6 +94,9 @@ app.get('/captured', function(req, res){
   })
 });
 
+app.post('/image', function(req, res){
+    console.log(req.body);
+});
 
 
 http.createServer(app).listen(app.get('port'), function(){
