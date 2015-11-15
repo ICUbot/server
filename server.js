@@ -77,7 +77,7 @@ app.get('/intruder', function(req, res){
 
     // now we can reference the media and post a tweet (media will attach to the tweet)
     var mediaIdStr = data.media_id_string
-    var params = { status: 'intruder', media_ids: [mediaIdStr] }
+    var params = { status: 'Intruder alert. Chasing now...', media_ids: [mediaIdStr] }
 
     T.post('statuses/update', params, function (err, data, response) {
       if (!err && response.statusCode == 200) {
@@ -107,7 +107,7 @@ app.get('/captured', function(req, res){
 
     // now we can reference the media and post a tweet (media will attach to the tweet)
     var mediaIdStr = data.media_id_string
-    var params = { status: 'intruder captured', media_ids: [mediaIdStr] }
+    var params = { status: 'Intruder Captured. It\'s all safe now', media_ids: [mediaIdStr] }
 
     T.post('statuses/update', params, function (err, data, response) {
       if (!err && response.statusCode == 200) {
