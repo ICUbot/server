@@ -34,6 +34,32 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/users', user.list);
 
+
+app.post('/image', function(req, res) {
+    console.log(req.files.image.originalFilename);
+    console.log(req.files.image.path);
+    fs.readFile(req.files.image.path, function (err, data){
+        var dirname = "/public/imgs";
+        var newPath = dirname + "/uploads/" + "image";
+        fs.writeFile(newPath, data, function (err) {
+        if(err){
+                res.json({'response':"Error"});
+            } else {
+                res.json({'response':"Saved"});
+            }
+        });
+    });
+});
+ 
+ 
+app.get('/image/:file', function (req, res){
+        file = req.params.file;
+        var dirname = "/public/imgs";
+        var img = fs.readFileSync(dirname + "/uploads/" + file);
+        res.writeHead(200, {'Content-Type': 'image/png' });
+        res.end(img, 'binary');
+});
+
 app.get('/intruder', function(req, res){
   // auth keys
   var T = new Twit({
@@ -94,9 +120,7 @@ app.get('/captured', function(req, res){
   })
 });
 
-app.post('/image', function(req, res){
-    console.log(req.body);
-});
+
 
 
 http.createServer(app).listen(app.get('port'), function(){
